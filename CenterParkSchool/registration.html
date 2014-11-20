@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head>
+  <title>Center Park School: Online Registration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <link rel="stylesheet" type="text/css" href="centerPark.css" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	function confirmReset() {
+	  var resetForm = window.confirm("Clear entire form now?");
+	  if (resetForm == true) 
+	    return true;
+	  return false;
+	}
+	
+  	function validateSubmission(form) {
+	if (form.firstname.value == null || form.firstname.value == "") {
+	  alert("You must enter your first name.");
+	  form.firstname.focus();
+	  return false;
+	  }
+	if (form.lastname.value == null || form.lastname.value == "") {
+	  alert("You must enter your last name.");
+	  form.lastname.focus();
+	  return false;
+	  } 
+	if (checkRadio(form.account_type) == null || checkRadio(form.account_type) == "") {
+	   alert("You must select an account type."); 
+	   return false; 
+	   }  
+	var returnValue1 = checkStudentID(form.studentID);
+	if (returnValue1 == false)
+	  return returnValue1;
+	if (form.email.value != form.email_verify.value) {
+	  alert("You did not enter the same email address twice.  Please try again.");
+	  form.email.focus();
+	  return false;
+	  }
+	var returnValue2 = checkEmail(form.email);
+	if (returnValue2 == false)
+	  return returnValue2;
+	var returnValue3 = checkPhone(form.phone);
+	if (returnValue3 == false)
+	  return returnValue3;
+	 
+	var firstname = form.firstname.value;
+    form.firstname.value = firstname.toUpperCase();
+	var lastname = form.lastname.value;
+	form.lastname.value = lastname.toUpperCase();
+	var address = form.address.value;
+	form.address.value = address.toUpperCase();
+	var email = form.email.value;
+	form.email.value = email.toUpperCase();
+	var email2 = form.email_verify.value;
+	form.email_verify.value = email2.toUpperCase();
+	return true;
+	} //ends function
+	
+	function checkRadio(field) { 
+	  for(var i=0; i < field.length; i++) { 
+	    if(field[i].checked) 
+		  return field[i].value; 
+	    } 
+	return false; 
+	}
+	
+	function checkStudentID(field2) {
+	  var ID = field2.value;
+	  IDCheck = /^101[\d]{6}$/;
+	  if (IDCheck.test(ID) == false) {
+	    alert("Please verify that you entered a correct, valid student ID.");
+		document.forms[0].studentID.focus();
+		return false;
+	  }
+	  return true;
+	}
+	
+	function checkEmail(field3) {
+	  var email = field3.value;
+	  var emailCheck = /^[_\w\-]+(\.[_\w\-]+)*@[\w\-]+(\.[\w\-]+)*(\.[\D]{2,3})$/;
+	  if (emailCheck.test(email) == false) {
+	    alert("Please verify that you entered a correct, valid email address.");
+		document.forms[0].email.focus();
+		return false;
+	  }
+	  return true;
+	}
+	
+	function checkPhone(field4) {
+	  var phone = field4.value;
+	  var phoneCheck = /^(1 )?(\([0-9]{3}\) )?([0-9]{3})(\-[0-9]{4})$/;
+	  if (phoneCheck.test(phone) == false) {
+	    alert("Please verify that you entered your correct, valid phone number.");
+	    document.forms[0].phone.focus();
+	    return false;
+	    }
+	  return true;
+	}
+	/* ]]> */
+	</script>
+</head>
+<body>
+  <div class="skipnav"></div>
+  <div class="container">
+	<div class="header">
+		<div class="header_left">
+			<form id="selectSchool">
+			  <p>
+				<select name="districtList">
+					<option>Pocahontas District Options</option>
+					<option>District Home</option>
+					<option>Middle Brook Elementary</option>
+					<option>Tower Tall High School</option>
+					<option>Summer Grove Junior High</option>
+					<option>Cherry Orchard Elementary</option>
+					<option>Center Park School</option>
+				</select>
+			  </p>
+			</form>
+		</div>
+		<div class="header_central">
+			<h1>Center Park School</h1><p><em>Home of the Hammerin Hippos</em></p>
+		</div>
+		<div class="header_right">
+			<form id="loginForm"> 
+				<p>User Name:<input type="text" name="UserName" size="10"/><br />
+				&nbsp;&nbsp;&nbsp;Password:<input type="password" name="password" size="10" /><br />
+				<input type="button" value="Sign In" /></p> 
+			</form>
+		</div>
+	</div> <!-- ends the header div --> 
+	<div class="title">
+		<div class="title_left">
+			<img class="thumb"  src="images/school_front.jpg" alt="school logo of a Hammerin Hippo" />
+			<img class="thumb"  src="images/hippo_logo.jpg"alt="picture of the school"  />
+		</div>	
+		<div class="title_right">
+	        <form>
+				<p>
+				   <input type="text" id="search_field" name="search" placeholder="Search this Site..." />
+				   <a id="mag_glass"><img src="images/mag_glass.jpg" alt="Search" height="20" width="20" /></a>
+				</p>
+		    </form>
+			<p>
+				1100 W Center Park Dr.<br />
+				Hutto, UT 84000<br /><strong>Phone:</strong> 801-555-4321<br />
+				<strong>Fax:</strong>801-555-9876
+			</p>
+		</div>
+	</div>
+	<div class="box">
+		<nav>
+			 <a href="index.html">Home</a>
+			 <a href="about.html">About Us</a>
+			 <a href="">Administration</a>
+			 <a href="">Counseling</a>
+			 <a href="">Faculty</a>
+			 <a href="">Policies</a>
+			 <a href="">Recognition</a>
+			 <a href="registration.html">Registration</a>
+		</nav>
+      <div id="left_alt"><p>The form on this page is for parents or students within the district to register for access restricted areas of this site, including the Blackboard online education system.  <em>All forms marked with an <span class="reddy">*</span> are required.</em></p>
+	  <p>To register your child to attend Center Park School, you must come to the Office in person between the hours of 
+	  8am and 5:30pm, with proof of residency, photo identification, and medical history and records for your child.
+	  Transcript from previous school preferred.</p></div>
+	<div id="form_envelope" class="greyForm">
+	  <form id="registerForm" action="formProcessor.html" method="get" name="regForm" onsubmit="return validateSubmission(this);">
+		<p>First Name:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="firstname"  /></p>
+		<p>Last Name:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="lastname"  /></p>
+		<p>Type of Account:<span class="reddy">*</span>&nbsp;&nbsp;<input type="radio" name="account_type" value="0" />Student&nbsp;&nbsp;<input type="radio" name="account_type" value="1" />Parent</p>
+		<p>Student ID:<span class="reddy">*</span><em> Your ID or that of your child (Found on report cards, or call your child's homeroom teacher)</em>&nbsp;&nbsp;<br />
+		<input type="text" name="studentID" size="10" maxlength="9" /></p>
+		<p>Address Line 1:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="address" size="40" /></p>
+		<p>Address Line 2:<input type="text" name="address2" /></p>
+		<p>City:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="city"  />&nbsp;&nbsp;&nbsp;State:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="state" size="2" />&nbsp;&nbsp;&nbsp;Zip Code:&nbsp;&nbsp;<input type="text" name="zip" size="5"></p>
+		<p>Email Address:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="email"  /></p>
+		<p>Verify Email:<span class="reddy">*</span>&nbsp;&nbsp;<input type="text" name="email_verify"  /></p>
+		<p>Phone Number:<span class="reddy">*</span><span class="reddy" style="font-size: .75em;"><em> 1 (123) 456-7890</em></span><input type="text" name="phone" size="25" /></p>
+		<p>User Name:<span class="reddy">*</span><em>Must be 6-10 characters long</em>&nbsp;&nbsp;<input type="text" name="username" size="10" minlength="6" maxlength="10" /></p>
+		<p>Password:<span class="reddy">*</span><em>Must be 8-12 characters long, with at least one capitol letter, number, and one other special character.</em>&nbsp;&nbsp;<input type="password" name="password" size="15" minlength="8" maxlength="12" /></p>
+		<input type="submit" value="Register" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear Form" onclick="return confirmReset();" />
+	  </form>
+	  <div id="errorDisplay"></div>
+    </div>
+   </div>
+</div>
+<footer>
+  <ul>
+    <li><a href="">Questions or Feedback?</a></li>
+	<li>|</li>
+    <li><a href="termsofuse.pdf">Terms of Use</a></li>
+	<li>|</li>
+    <li><a href="privacypolicy.pdf">Privacy Policy</a></li>
+  </ul>
+  <p>Design by Andrew David; All content &copy; 2014 Center Park School Project</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head>
+  <title>Center Park School: Online Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <link rel="stylesheet" type="text/css" href="centerPark.css" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	  /*var emptyCart = true;
+	  var salesTotal = 0;
+	  var curRow = 1;
+	  function addItem(selectedItem) {
+	    if (emptyCart == true) {
+		  document.getElementById('cartTable').deleteRow(0);
+		  emptyCart = false;
+		  }
+		  var curItem = document.getElementById('storeTable').rows[selectedItem].cells;
+		  var selectedItem = curItem[0].innerHTML;
+		  var itemPrice = curItem[1].innerHTML;
+		  var itemSize = curItem[2].; //must use selected index for the select- name the select?
+		  var lastItem = document.getElementById('cartTable').rows.length;
+		  var CartTable2 = document.getElementById('cartTable');
+		  var newRow = cartTable2.insertRow(lastItem);
+		  document.getElementById('storeTable').rows[lastItem].id = "R" + curRow;
+		  var itemCell = newRow.insertCell(0);
+		  itemCell.innerHTML = selectedItem;
+		  var priceCell = newRow.insertCell(1);
+		  priceCell.innerHTML = itemPrice;
+		  var sizeCell = newRow.insertCell(2);
+		  sizeCell.innerHTML = itemSize; 
+		  var actionCell = newRow.insertCell(3);
+		  actionCell.innerHTML = "<input type='button' value='Remove' " + 
+		    "onclick=\"removeItem('R" + curRow + "')\" />";
+		  ++curRow;
+		  
+		  salesTotal += parseFloat(itemPrice.substring(1));
+		  document.getElementById('total').innerHTML = "<strong>Sales total</strong>: $" +
+		    salesTotal.toFixed(2);
+		  
+		  //since I have a 4 cell table instead of 3- need to alter the function
+		  //must pass down the size of selected items also.
+		  //price cell remains second which is fortuitous!
+	  } //ends the whole function
+	  
+	  function removeItem(rowNum) {
+	    if (document.getElementById('cartTable').rows.length == 1 {
+		   document.getElementById('cartTable').rows[0].cells[0].innerHTML = "<td>Your shopping cart is empty</td>";
+		   document.getElementById('cartTable').rows[0].cells[1].innerHTML = "<td>$0.00</td>";
+		   salesTotal = 0;
+		   document.getElementById('total').innerHTML = "$" + salesTotal.toFixed(2);
+		   emptyCart = true;
+		   }
+		else{
+		   var selectedRow = document.getElementById(rowNum).rowIndex;
+		   document.getElementById('cartTable').deleteRow(selectedRow);
+		   var itemPrice = document.getElementById('cartTable').rows[0].cells[1].innerHTML;
+		   salesTotal = salesTotal - parseFloat(itemPrice.substring(1));
+		   document.getElementById('total').innerHTML = "$" + salesTotal.toFixed(2);
+		}
+	  }*/
+	  
+	function calcSub() {
+	var hoodyQty = document.forms[0].hoodyQty.value;
+	var hoodySub = hoodyQty * 29.95;
+	var hoodyDisc = hoodyQty * 29.95 * 0.9;
+	
+	if (hoodyQty < 3)
+	  document.forms[0].hoodySub.value = hoodySub.toFixed(2);
+	else
+	  document.forms[0].hoodySub.value = hoodyDisc.toFixed(2);
+	}
+	
+	function calcSub2() {
+	var backpackQty = document.forms[1].backpackQty.value;
+	var backpackSub = backpackQty * 24.95;
+	var backpackSubNavy = backpackQty * 19.95;
+	
+	if (document.forms[1].backpackColor.selectedIndex == 4)
+	  document.forms[1].backpackSub.value = backpackSubNavy.toFixed(2);
+	else
+	  document.forms[1].backpackSub.value = backpackSub.toFixed(2);
+	}
+	
+	function addToCart(itemSub) {
+	  var storeThis = parseFloat(itemSub);
+	  var subTotal = parseFloat(document.forms[2].subTotal.value);
+	  subTotal += storeThis;
+	  document.forms[2].subTotal.value = subTotal.toFixed(2);	  
+	}
+	
+	 /*function estTotal() {
+	  var subStart = parseFloat(document.forms[2].subTotal.value);
+	  var ST = document.forms[2].state.value.toUpperCase();
+	  var radioboxes = document.forms[2].delivType.value;
+	  var shipFactor = 1.0;
+	  var shipBase = 5.99;
+	  var subFinish = 0;
+	
+	 if (ST == "UT")
+	    shipFactor = 0.5;
+	  else if (ST == "AK")
+	    shipFactor = 1.5;
+	  else if (ST == "HI")
+	    shipFactor = 1.25;
+    
+	if (radioboxes == "ground")
+	  shipBase = 5.99;
+	else if (radioboxes == "2day")
+	  shipBase = 11.99;
+	else if (radioboxes == "nextday")
+	  shipBase = 15.99;
+	 
+    var discountFactor = 1.0;	 
+	var IDCheck = /^101[\d]{6}$/;
+	var ID = IDCheck.test(document.forms[2].discID.value);
+	if (ID == true)
+	  discountFactor = 0.9;
+	  
+	(subStart + (shipBase * shipFactor)) * discountFactor = subFinish;
+	document.forms[2].displayTotal.value = "$" + subFinish;
+} */
+
+	/* ]]> */
+	</script>
+</head>
+<body>
+  <div class="skipnav"></div>
+  <div class="container">
+	<div class="header">
+		<div class="header_left">
+			<form id="selectSchool">
+			  <p>
+				<select name="districtList">
+					<option>Pocahontas District Options</option>
+					<option>District Home</option>
+					<option>Middle Brook Elementary</option>
+					<option>Tower Tall High School</option>
+					<option>Summer Grove Junior High</option>
+					<option>Cherry Orchard Elementary</option>
+					<option>Center Park School</option>
+				</select>
+			  </p>
+			</form>
+		</div>
+		<div class="header_central">
+			<h1>Center Park School</h1><p><em>Home of the Hammerin Hippos</em></p>
+		</div>
+		<div class="header_right">
+				<br />
+				<p style="color: #ffffff; text-align: right;">You are logged in.</p> 
+				<br />
+		</div>
+	</div> <!-- ends the header div --> 
+	<div class="title">
+		<div class="title_left">
+			<img class="thumb"  src="images/school_front.jpg" alt="school logo of a Hammerin Hippo" />
+			<img class="thumb"  src="images/hippo_logo.jpg"alt="picture of the school"  />
+		</div>	
+		<div class="title_right">
+	        <form>
+				<p>
+				   <input type="text" id="search_field" name="search" placeholder="Search this Site..." />
+				   <a id="mag_glass"><img src="images/mag_glass.jpg" alt="Search" height="20" width="20" /></a>
+				</p>
+		    </form>
+			<p>
+				1100 W Center Park Dr.<br />
+				Hutto, UT 84000<br /><strong>Phone:</strong> 801-555-4321<br />
+				<strong>Fax:</strong>801-555-9876
+			</p>
+		</div>
+	</div>
+<div class="box">
+    <nav>
+     <a href="index.html">Home</a>
+     <a href="about.html">About Us</a>
+     <a href="">Administration</a>
+     <a href="">Counseling</a>
+     <a href="">Faculty</a>
+     <a href="">Policies</a>
+     <a href="">Recognition</a>
+     <a href="registration.html">Registration</a>
+    </nav>
+	<h1 style="text-align: center;">Center Park School Online Store</h1>
+	<h4 style="text-align: center;">All proceeds go directly back into the school budget.</h4>
+    <div id="storeFront">
+	  <table id="storeTable" border="0">
+	    <tr id="item1Hoody">
+		  <td>
+		    <table>
+			  <tr>
+			    <td colspan="4"><img src="images/hoody.jpg" id="hoodyMain" height="200" width="200" style="border: 2px solid #FF8C00;" /></td>
+			  </tr>
+			  <tr>
+			    <td><img src="images/hoodyS.jpg" height="50" width="50" onclick="document.getElementById('hoodyMain').src = 'images/hoody.jpg'" /></td>
+				<td><img src="images/hoodyblueS.jpg" height="50" width="50" onclick="document.getElementById('hoodyMain').src = 'images/hoodyblue.jpg'" /></td>
+				<td><img src="images/hoodygreenS.jpg" height="50" width="50" onclick="document.getElementById('hoodyMain').src = 'images/hoodygreen.jpg'" /></td>
+				<td><img src="images/hoodyorangeS.jpg" height="50" width="50" onclick="document.getElementById('hoodyMain').src = 'images/hoodyorange.jpg'" /></td>
+			  </tr>
+			</table>
+		 </td>
+		 <td>
+		   <h2>Hammerin Hippo Hoody</h2>
+		   <h4>Description:</h4>
+		   <p>This luxurious hoody is made from 100% pre-shrunk cotton, and comes in a variety of colors and sizes with the school logo printed
+		      on the front. Show off your pride in Center Park School while keeping warm.  Perfect for jogging, sports, cool weather,
+			  or lounging about the house or as a top for sleeping.  Stain-resistant, micro-fiber treatment.
+			  
+			  Weight = 14 oz, Shipping weight = 1.2 lb
+			  </p>
+		 </td>
+		 <td>
+		    <form action="" method="" name="hoodyForm" class="greyForm">
+		    <table>
+		    <tr>
+		      <td><p><select name="hoodySize">
+			    <option>Size</option>
+			    <option>Small</option>
+			    <option>Medium</option>
+			    <option>Large</option>
+			    <option>Extra Large</option>
+			  </select></td>
+			</tr>
+			<tr>
+			  <td><select name="hoodyColor">
+			    <option>Color</option>
+				<option>Heather Gray</option>
+				<option>Royal Blue</option>
+				<option>Forest Green</option>
+				<option>Navy Blue</option>
+			  </select></td>
+			</tr>
+			<tr>
+			  <td>
+			    <strong>Price:</strong>$29.95
+				<strong class="reddy">Special: Buy 3, save 10%</strong>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+			    <strong>Qty:</strong><br /><input type="text" size="5" name="hoodyQty" onchange="calcSub();" />
+			  </td>
+			</tr>
+			<tr>
+			    <td>
+				  <strong>Subtotal:</strong>&nbsp;&nbsp;<input type="text" size="10" name="hoodySub" /></p>
+			    </td>
+			</tr>
+			</table>
+		  </td>
+		</tr> 
+		<tr>
+		  <td colspan="4" style="text-align: center"><img src="images/add-to-cart-button.png" height="60" width="221" alt="button to add item to shopping cart" onmouseover="this.src='images/add-to-cart-buttonB.png'" onmouseout="this.src='images/add-to-cart-button.png'" onclick="addToCart(document.forms[0].hoodySub.value);" /></td>
+		</tr>
+		</form>
+		<tr>
+		  <td colspan="4"><hr /></td>
+		</tr>
+		<tr id="item2Backpack">
+		  <td>
+		    <table>
+			  <tr>
+			    <td colspan="4"><img src="images/backpack.jpg" id="backpackMain" height="200" width="200" style="border: 2px solid #FF8C00;" /></td>
+			  </tr>
+			  <tr>
+			    <td><img src="images/backpackS.jpg" height="50" width="50" onclick="document.getElementById('backpackMain').src ='images/backpack.jpg'" /></td>
+				<td><img src="images/backpackblackS.jpg" height="50" width="50" onclick="document.getElementById('backpackMain').src = 'images/backpackblack.jpg'" /></td>
+				<td><img src="images/backpackgreenS.jpg" height="50" width="50" onclick="document.getElementById('backpackMain').src = 'images/backpackgreen.jpg'" /></td>
+				<td><img src="images/backpacknavyS.jpg" height="50" width="50" onclick="document.getElementById('backpackMain').src = 'images/backpacknavy.jpg'" /></td>
+			  </tr>
+			</table>
+		 </td>
+		 <td>
+		   <h2>Hammerin Hippo Backpack</h2>
+		   <h4>Description:</h4>
+		   <p>This heavy-duty all-purpose backpack has a main compartment with double-side top zippers, 3 front pockets, side storage,
+		   and special pockets for a cell phone and personal music player.  Straps are all adjustable, and comes with a detachable waist-belt
+		   cinch for active use.  Water-resistant and tear-resistant 240 denier nylon.  Comes in a variety of colors.  Small size is 18 Liter:
+		   ideal for Kindergarten though 2nd Grade.  Medium is 24 Liter: Ideal for 3rd Grade through 6th Grade.  Large is 32 Liter: Fit is best
+		   For adults or larger children.  
+		   
+		   Weight = 1.9 lb, Shipping weight = 2.3 lb
+		   </p>
+		 </td>
+		 <td>
+		    <form action="" method="" name="backpackForm" class="greyForm">
+		    <table>
+		    <tr>
+		      <td><p><select name="backpackSize">
+			    <option>Size</option>
+			    <option>Small</option>
+			    <option>Medium</option>
+			    <option>Large</option>
+			  </select></td>
+			</tr>
+			<tr>
+			  <td><select name="backpackColor">
+			    <option>Color</option>
+				<option>Taupe</option>
+				<option>Black</option>
+				<option>Forest Green</option>
+				<option>Navy Blue</option>
+			  </select></td>
+			</tr>
+			<tr>
+			  <td>
+			    <strong>Price:</strong>$24.95
+				<strong class="reddy">Special for Navy only:</strong>$19.95
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+			    <strong>Qty:</strong><br /><input type="text" size="5" name="backpackQty" onchange="calcSub2();" />
+			  </td>
+			</tr>
+			<tr>
+			    <td>
+				  <strong>Subtotal:</strong>&nbsp;&nbsp;<input type="text" size="10" name="backpackSub" /></p>
+			    </td>
+			</tr>
+			</table>
+			</form>
+		  </td>
+		</tr> 
+		<tr>
+		  <td colspan="4" style="text-align: center"><img src="images/add-to-cart-button.png" height="60" width="221" alt="button to add item to shopping cart" onmouseover="this.src='images/add-to-cart-buttonB.png'" onmouseout="this.src='images/add-to-cart-button.png'" onclick="addToCart(document.forms[1].backpackSub.value);" /></td>
+		</tr>
+	  </table>
+	  <div id="cartDiv">
+	  <form action="" method="" name="thirdForm" style="text-align: center" class="greyForm">
+	  <h3>Your Shopping Cart</h3>
+	  <p>Estimate your shipping and sales tax below.</p>
+	  <a href="">Or View Full Cart in a new Window when Ready</a>
+	  <p><strong>Your Subtotal:</strong><br />
+	  <input type="text" size="10" name="subTotal" onfocus="this.blur();" value="0.00" style="text-align: right" /><br />
+	  <strong>Your State:</strong><br />
+	  <input type="text" size="10" maxlength="2" name="state" /><br />
+	  <strong>Delivery Method:</strong><br />
+	  <input type="radio" name="delivType" value="ground" checked="checked" onclick="document.forms[2].dispalyDeliv.value = '$5.99'" />USPS Ground
+	  <input type="radio" name="delivType" value="2day" onclick="document.forms[2].displayDeliv.value = '$11.99'" />UPS 2nd Day
+	  <input type="radio" name="delivType" value="nextday" onclick="document.forms[2].displayDeliv.value ='$15.99'" />UPS Next Day Air<br />
+	  <input type="text" name="displayDeliv" size="10" onfocus="this.blur();" value="$5.99" style="text-align: right" /><br />
+	  <strong>Discount Code:</strong><br /><em>Honor Roll students and parents receive 10% discount with verified registered Student ID</em><br />
+	  <input type="text" size="10" name="discID" /><br /><br />
+	  <input type ="button" value="Estimate Now" onclick="estTotal();" /><br />
+	  <strong>Your Estimated Total</strong><br />
+	  <input type="text" size="10" name="displayTotal" onfocus="this.blur();" value="$0.00" style="text-align: right" />
+	  </p>
+	  </form>
+	  </div>
+	</div>
+</div>
+<footer>
+  <ul>
+    <li><a href="">Questions or Feedback?</a></li>
+	<li>|</li>
+    <li><a href="termsofuse.pdf">Terms of Use</a></li>
+	<li>|</li>
+    <li><a href="privacypolicy.pdf">Privacy Policy</a></li>
+  </ul>
+  <p>Design by Andrew David; All content &copy; 2014 Center Park School Project</p>
+</footer>
+</body>
+</html>

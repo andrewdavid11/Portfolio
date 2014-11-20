@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head>
+  <title>Center Park School: Your Secure HomeRoom</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <link rel="stylesheet" type="text/css" href="centerPark.css" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var answers = new Array(6);
+	var correct = new Array(6);
+	correct[0] = "a";
+	correct[1] = "a";
+	correct[2] = "d";
+	correct[3] = "c";
+	correct[4] = "b";
+	correct[5] = "b";
+	
+	function recordAnswer(question, answer) {
+	  answers[question-1] = answer;
+	}
+	
+	function scoreQuiz() {
+	var totalCorrect = 0;
+	var count = 0;
+	while (count < correct.length) {
+	  if (answers[count] == correct[count])
+	    ++totalCorrect;
+	  ++count;
+	  }
+	document.quiz.score.value = "You scored " + totalCorrect + " out of 6 correctly.";
+	} //ends the scoreQuiz function
+	/* ]]> */
+	</script>
+</head>
+<body>
+  <div class="skipnav"></div>
+  <div class="container">
+	<div class="header">
+		<div class="header_left">
+			<form id="selectSchool">
+			  <p>
+				<select name="districtList">
+					<option>Pocahontas District Options</option>
+					<option>District Home</option>
+					<option>Middle Brook Elementary</option>
+					<option>Tower Tall High School</option>
+					<option>Summer Grove Junior High</option>
+					<option>Cherry Orchard Elementary</option>
+					<option>Center Park School</option>
+				</select>
+			  </p>
+			</form>
+		</div>
+		<div class="header_central">
+			<h1>Center Park School</h1><p><em>Home of the Hammerin Hippos</em></p>
+		</div>
+		<div class="header_right">
+			<form id="loginForm"> 
+				<p>User Name:<input type="text" name="UserName" size="10"/><br />
+				&nbsp;&nbsp;&nbsp;Password:<input type="password" name="password" size="10" /><br />
+				<input type="button" value="Sign In" /></p> 
+			</form>
+		</div>
+	</div> <!-- ends the header div --> 
+	<div class="title">
+		<div class="title_left">
+			<img class="thumb"  src="images/school_front.jpg" alt="school logo of a Hammerin Hippo" />
+			<img class="thumb"  src="images/hippo_logo.jpg"alt="picture of the school"  />
+		</div>	
+		<div class="title_right">
+	        <form>
+				<p>
+				   <input type="text" id="search_field" name="search" placeholder="Search this Site..." />
+				   <a id="mag_glass"><img src="images/mag_glass.jpg" alt="Search" height="20" width="20" /></a>
+				</p>
+		    </form>
+			<p>
+				1100 W Center Park Dr.<br />
+				Hutto, UT 84000<br /><strong>Phone:</strong> 801-555-4321<br />
+				<strong>Fax:</strong>801-555-9876
+			</p>
+		</div>
+	</div>
+	<div class="box">
+		<nav>
+		 <a href="homeroomS.html">HomeRoom</a>
+		 <a href="">Your Schedule</a>
+		 <a href="">FAQ</a>
+		 <a href="">Student Directory</a>
+		</nav>
+		<div>
+		<h1>Welcome, Student</h1>
+		<h3>Mr. Davis, 4th Grade</h3>
+		<h4>Practice Quiz for Friday's Chapter 7 Science Test</h4>
+		</div>
+		<form action="" name="quiz">
+		<p><strong>What is the most abundant element in the universe?</strong></p>
+		<p>
+		<input type="radio" name="question1" value="a" onclick="recordAnswer(1,'a')" />Hydrogen<br />
+		<input type="radio" name="question1" value="b" onclick="recordAnswer(1,'b')" />Helium<br />
+		<input type="radio" name="question1" value="c" onclick="recordAnswer(1,'c')" />Oxygen<br />
+		<input type="radio" name="question1" value="d" onclick="recordAnswer(1,'d')" />Carbon<br />
+		</p>
+		<p><strong>What is the first element on the periodic table?</strong></p>
+		<p>
+		<input type="radio" name="question2" value="a" onclick="recordAnswer(2,'a')" />Hydrogen<br />
+		<input type="radio" name="question2" value="b" onclick="recordAnswer(2,'b')" />Helium<br />
+		<input type="radio" name="question2" value="c" onclick="recordAnswer(2,'c')" />Oxygen<br />
+		<input type="radio" name="question2" value="d" onclick="recordAnswer(2,'d')" />Carbon<br />
+		</p>
+		<p><strong>Which of the following has an atomic number of 12.01?</strong></p>
+		<p>
+		<input type="radio" name="question3" value="a" onclick="recordAnswer(3,'a')" />Hydrogen<br />
+		<input type="radio" name="question3" value="b" onclick="recordAnswer(3,'b')" />Helium<br />
+		<input type="radio" name="question3" value="c" onclick="recordAnswer(3,'c')" />Oxygen<br />
+		<input type="radio" name="question3" value="d" onclick="recordAnswer(3,'d')" />Carbon<br />
+		</p>
+		<p><strong>Which element was discovered by Joseph Priestly in England in 1767?</strong></p>
+		<p>
+		<input type="radio" name="question4" value="a" onclick="recordAnswer(4,'a')" />Hydrogen<br />
+		<input type="radio" name="question4" value="b" onclick="recordAnswer(4,'b')" />Helium<br />
+		<input type="radio" name="question4" value="c" onclick="recordAnswer(4,'c')" />Oxygen<br />
+		<input type="radio" name="question4" value="d" onclick="recordAnswer(4,'d')" />Carbon<br />
+		</p>
+		<p><strong>Which element is the least stable?</strong></p>
+		<p>
+		<input type="radio" name="question5" value="a" onclick="recordAnswer(5,'a')" />Hydrogen<br />
+		<input type="radio" name="question5" value="b" onclick="recordAnswer(5,'b')" />Uranium<br />
+		<input type="radio" name="question5" value="c" onclick="recordAnswer(5,'c')" />Oxygen<br />
+		<input type="radio" name="question5" value="d" onclick="recordAnswer(5,'d')" />Carbon<br />
+		</p>
+		<p><strong>Which element is produced during fusion within stars?</strong></p>
+		<p>
+		<input type="radio" name="question6" value="a" onclick="recordAnswer(6,'a')" />Hydrogen<br />
+		<input type="radio" name="question6" value="b" onclick="recordAnswer(6,'b')" />Helium<br />
+		<input type="radio" name="question6" value="c" onclick="recordAnswer(6,'c')" />Oxygen<br />
+		<input type="radio" name="question6" value="d" onclick="recordAnswer(6,'d')" />Carbon<br />
+		</p>
+		<p>
+		<input type="button" value="Score" onclick="scoreQuiz();" />
+		<input type="text" name="score" size="40" style="border-style: none; border-color: inherit; border-width: medium; background-color: Transparent" text="0" />
+		</p>
+		</form>
+	</div>
+<footer>
+  <ul>
+    <li><a href="">Questions or Feedback?</a></li>
+	<li>|</li>
+    <li><a href="termsofuse.pdf">Terms of Use</a></li>
+	<li>|</li>
+    <li><a href="privacypolicy.pdf">Privacy Policy</a></li>
+  </ul>
+  <p>Design by Andrew David; All content &copy; 2014 Center Park School Project</p>
+</footer>
+</body>
+</html>

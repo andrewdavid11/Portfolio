@@ -1,0 +1,1149 @@
+/* Gradients may not work in older IE. I used PIE which may not be loaded on the codepen server. */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: green;
+}
+
+#cardtable {
+  background-color: green;
+  width: 100%;
+}
+
+#spadecard, #heartcard, #diamondcard, #clubcard {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2em;
+  box-shadow: 0.2em 0.2em 0.1em #003200;
+  display: inline-block;
+  float:left;
+  height: 250px;
+  width: 200px;
+}
+
+#heartcard {
+  position: relative;
+    top: 40px;
+    left: 70px;
+   transform: rotate(-5deg)
+  -webkit-transform: rotate(-5deg);
+  -moz-transform:    rotate(-5deg);
+  -ms-transform:     rotate(-5deg);
+  -o-transform:      rotate(-5deg);
+}
+
+    #heartholder {
+      height: 17.5%;
+      width: 17.5%;
+      position: relative;
+        left: 1em;
+        top: 1em;
+    }
+
+    #heartholder2 {
+      height: 17.5%;
+      width: 17.5%;
+      position: relative;
+        left: 10em;
+        top: -4.75em;
+    }
+
+    #heart {  
+      width: 100%; 
+      height: 90%; 
+      position: relative;
+    } 
+
+    #heart:before, #heart:after { 
+          position: absolute; 
+          content: ""; 
+          left: 50%; 
+          top: 0; 
+          width: 50%; 
+          height: 80%; 
+          background: red; 
+          border-radius: 50% 50% 0 0; 
+          -webkit-transform: rotate(-45deg); 
+          -moz-transform: rotate(-45deg); 
+          -ms-transform: rotate(-45deg); 
+          -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+         -webkit-transform-origin: 0 100%; 
+         -moz-transform-origin: 0 100%; 
+         -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+         transform-origin: 0 100%; 
+       } 
+
+   #heart:after { 
+          left: 0; 
+          -webkit-transform: rotate(45deg); 
+          -moz-transform: rotate(45deg); 
+          -ms-transform: rotate(45deg); 
+          -o-transform: rotate(45deg); 
+         transform: rotate(45deg); 
+         -webkit-transform-origin: 100% 100%; 
+         -moz-transform-origin: 100% 100%; 
+         -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+         transform-origin :100% 100%; 
+       }
+
+   #heartnumber {
+    color: red;
+    position: relative;
+      left: 1.75em;
+      top: 0.25em;
+   }
+
+   #heartnumber2 {
+    color: red;
+    position: relative;
+      left: -1.5em;
+      top: -4.75em;
+   }
+
+   #heart2 {
+    width: 100%;
+    height: 90%;
+    position: relative;
+   }
+
+   #heart2:before, #heart2:after { 
+          position: absolute; 
+          content: ""; 
+          left: 55%; 
+          top: 0; 
+          width: 50%; 
+          height: 80%; 
+          background: red; 
+          border-radius: 0 0 50% 50%; 
+          -webkit-transform: rotate(-45deg); 
+          -moz-transform: rotate(-45deg); 
+          -ms-transform: rotate(-45deg); 
+          -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+         -webkit-transform-origin: 0 100%; 
+         -moz-transform-origin: 0 100%; 
+         -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+         transform-origin: 0 100%; 
+       } 
+
+   #heart2:after { 
+          left: -55%; 
+          -webkit-transform: rotate(45deg); 
+          -moz-transform: rotate(45deg); 
+          -ms-transform: rotate(45deg); 
+          -o-transform: rotate(45deg); 
+         transform: rotate(45deg); 
+         -webkit-transform-origin: 100% 100%; 
+         -moz-transform-origin: 100% 100%; 
+         -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+         transform-origin :100% 100%; 
+       }
+
+   #heartbox1, #heartbox2, #heartbox3 {
+      height: 25%;
+      width: 25%;
+      position: relative;
+        left: 4.75em;
+        top: -1.75em;
+      display: block;
+   }
+   
+   #midheart1, #midheart2, #midheart3 {
+      width: 100%; 
+      height: 90%; 
+      position: relative;
+    } 
+  
+   #midheart3 {
+     left: .75em;
+     top: .25em;
+   }
+
+    #midheart1:before, #midheart1:after, #midheart2:before, #midheart2:after { 
+          position: absolute; 
+          content: ""; 
+          left: 50%; 
+          top: 0; 
+          width: 50%; 
+          height: 80%; 
+          background: red; 
+          border-radius: 50% 50% 0 0; 
+          -webkit-transform: rotate(-45deg); 
+          -moz-transform: rotate(-45deg); 
+          -ms-transform: rotate(-45deg); 
+          -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+         -webkit-transform-origin: 0 100%; 
+         -moz-transform-origin: 0 100%; 
+         -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+         transform-origin: 0 100%; 
+       } 
+
+   #midheart1:after, #midheart2:after { 
+          left: 0; 
+          -webkit-transform: rotate(45deg); 
+          -moz-transform: rotate(45deg); 
+          -ms-transform: rotate(45deg); 
+          -o-transform: rotate(45deg); 
+         transform: rotate(45deg); 
+         -webkit-transform-origin: 100% 100%; 
+         -moz-transform-origin: 100% 100%; 
+         -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+         transform-origin :100% 100%; 
+       }
+
+   #midheart3:before, #midheart3:after { 
+          position: absolute; 
+          content: ""; 
+          left: 54%; 
+          top: 0; 
+          width: 50%; 
+          height: 80%; 
+          background: red; 
+          border-radius: 0 0 50% 50%; 
+          -webkit-transform: rotate(-45deg); 
+          -moz-transform: rotate(-45deg); 
+          -ms-transform: rotate(-45deg); 
+          -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+         -webkit-transform-origin: 0 100%; 
+         -moz-transform-origin: 0 100%; 
+         -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+         transform-origin: 0 100%; 
+       } 
+
+   #midheart3:after { 
+          left: -55%; 
+          -webkit-transform: rotate(45deg); 
+          -moz-transform: rotate(45deg); 
+          -ms-transform: rotate(45deg); 
+          -o-transform: rotate(45deg); 
+         transform: rotate(45deg); 
+         -webkit-transform-origin: 100% 100%; 
+         -moz-transform-origin: 100% 100%; 
+         -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+         transform-origin :100% 100%; 
+   }
+
+#spadecard {
+  position: relative;
+    top: 60px;
+    left: 90px;
+   transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg);
+  -moz-transform:    rotate(-45deg);
+  -ms-transform:     rotate(-45deg);
+  -o-transform:      rotate(-45deg);
+}
+
+#spadeholder, #spadeholder2 {
+  width: 17.5%;
+  height: 17.5%;
+  position: relative;
+}
+
+#spadeholder {
+  left: 10%;
+  top: 3.5%;
+}
+
+#spadeholder2 {
+  left: 70%;
+  top: -15%;
+}
+
+#spade, #midspade1 {
+  position:relative; 
+    left: 20%;
+    top: 10%;
+   width:100%; 
+   height:90%;
+}
+
+#spade:before, #spade:after, #midspade1:before, #midspade1:after{
+  position: absolute; 
+    content: ""; 
+    left: 50%; 
+    top: 0; 
+    width: 62%; 
+    height: 80%; 
+    background: black; 
+    border-radius: 0 0 50px 50px; 
+ -webkit-transform: rotate(-45deg); 
+       -moz-transform: rotate(-45deg); 
+        -ms-transform: rotate(-45deg); 
+         -o-transform: rotate(-45deg); 
+            transform: rotate(-45deg); 
+    -webkit-transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
+       -moz-transform-origin: 0 100%; 
+        -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+            transform-origin: 0 100%;
+}
+
+#spade:after, #midspade1:after {
+  left: -87%; 
+    -webkit-transform: rotate(45deg); 
+       -moz-transform: rotate(45deg); 
+        -ms-transform: rotate(45deg); 
+         -o-transform: rotate(45deg); 
+            transform: rotate(45deg); 
+    -webkit-transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
+       -moz-transform-origin: 100% 100%; 
+        -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+            transform-origin :100% 100%; 
+}
+
+#midspade1:after {
+  left: -80%;
+}
+
+#spadestem, #spadestem2, #midspadestem1, #midspadestem2 {
+  height: 40%;
+  width: 10%;
+  background-color: black;
+  position: relative;
+    left: 27.5%;
+    top: -42.5%;
+}
+
+#midspadestem1 {
+  left:  30%;
+}
+
+#midspadestem2, #spadestem2 {
+  left: 80%;
+  top: -80%;
+}
+
+#spadebox1, #spadebox2 {
+  width: 25%;
+  height: 25%;
+  position: relative;
+    left: 40%;
+    top: -10%;
+  
+}
+
+#spadebox2 {
+  left: 27.5%;
+  top: 0%;
+}
+
+#spade, #spade2, #midspade1, #midspade2 {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+#spadenumber {
+  position: relative;
+    left: 11.5%;
+    top: 3%;
+}
+
+#spadenumber2 {
+  position: relative;
+    left: -11%;
+    top: -11%;
+}
+
+#spade2:before, #spade2:after, #midspade2:before, #midspade2:after{
+  position: absolute; 
+    content: ""; 
+    left: 50%; 
+    top: 0; 
+    width: 62%; 
+    height: 80%; 
+    background: black; 
+    border-radius: 50% 50% 0 0; 
+ -webkit-transform: rotate(45deg); 
+       -moz-transform: rotate(45deg); 
+        -ms-transform: rotate(45deg); 
+         -o-transform: rotate(45deg); 
+            transform: rotate(45deg); 
+    -webkit-transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
+       -moz-transform-origin: 0 100%; 
+        -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+            transform-origin: 0 100%;
+}
+
+#spade2:after, #midspade2:after {
+  left: 78%; /* placing the right part properly */
+    -webkit-transform: rotate(-45deg); /* rotating 45 degrees clockwise */
+       -moz-transform: rotate(-45deg); 
+        -ms-transform: rotate(-45deg); 
+         -o-transform: rotate(-45deg); 
+            transform: rotate(-45deg); 
+    -webkit-transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
+       -moz-transform-origin: 100% 100%; 
+        -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+            transform-origin :100% 100%; 
+}
+
+#diamondcard {
+  position: relative;
+    left: 125px;
+    top: 20px;
+   transform: rotate(5deg)
+  -webkit-transform: rotate(5deg);
+  -moz-transform:    rotate(5deg);
+  -ms-transform:     rotate(5deg);
+  -o-transform:      rotate(5deg);
+}
+
+#diamondholder, #diamondholder2 {
+  width: 15%;
+  height: 12.5%;
+  position: relative;
+}
+
+#diamond1, #diamond2 {
+  background-color: red;
+    width: 80%;
+    height: 80%;
+   transform: rotate(45deg)
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+}
+
+#diamond1 {
+    left: 1em;
+    top: 1em;
+}
+
+#diamondnumber {
+  color:red;
+  position: relative;
+    left: 0.6em;
+    top: 0.75em;
+}
+
+#midiamond1, #midiamond2, #midiamond3, #midiamond4, #midiamond5, #midiamond6, #midiamond7, #midiamond8, #midiamond9, #midiamond10 {
+  background-color: red;
+  width: 17.5%;
+  height: 13%;
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+}
+
+#midiamond1 {
+  left: 3.25em;
+  top: -0.5em;
+}
+
+#midiamond2 {
+  left: 7.1em;
+  top: -2.4em;
+}
+
+#midiamond3 {
+  left: 3.4em;
+  top: -1.25em;
+}
+
+#midiamond4 {
+  left: 7.25em;
+  top: -3.15em;
+}
+
+#midiamond5 {
+  left: 3.5em;
+  top: -2em;
+}
+
+#midiamond6 {
+  left: 7.35em;
+  top: -3.9em;
+}
+
+#midiamond7 {
+  left: 5.35em;
+  top: -7.65em;
+}
+
+#midiamond8 {
+  left: 5.25em;
+  top: -13em;
+}
+
+#midiamond9 {
+  left: 5.1em;
+  top: -18.35em;
+}
+
+#midiamond10 {
+  left: 5.5em;
+  top: -10.5em;
+}
+
+#diamondnumber2 {
+  color: red;
+  position: relative;
+    left: -0.75em;
+    top: -12.75em;
+}
+
+#diamond2 {
+  left: 10em;
+  top: -12.5em;
+}
+     
+#clubcard {
+  position: relative;
+    left: 150px;
+    top: 50px;
+  transform: rotate(55deg)
+  -webkit-transform: rotate(55deg);
+  -moz-transform:    rotate(55deg);
+  -ms-transform:     rotate(55deg);
+  -o-transform:      rotate(55deg);
+}
+
+#clubholder1, #clubholder2 {
+  position: relative;
+  width: 17.5%;
+  height: 17.5%;
+}
+
+#midclubox1, #midclubox2, #midclubox3, #midclubox4, #midclubox5 {
+  position: relative;
+  width: 25%;
+  height: 25%;
+}
+
+#club1a, #club1b, #club1c, #club2a, #club2b, #club2c, #mid1a, #mid1b, #mid1c, #mid2a, #mid2b, #mid2c, #mid3a, #mid3b, #mid3c, #mid4a, #mid4b, #mid4c, #mid5a, #mid5b, #mid5c {
+  background-color: black;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  moz-border-radius: 100%;
+  webkit-border-radius: 100%;
+  position: relative;
+}
+
+#club1a, #club2a, #mid1a, #mid2a, #mid3a, #mid4a, #mid5a {
+  left: 25%;
+  top: 0%;
+}
+
+#club1b, #club2b, #mid1b, #mid2b, #mid3b, #mid4b, #mid5b {
+  left: 5%;
+  top: -25%;
+}
+
+#club1c, #club2c, #mid1c, #mid2c, #mid3c, #mid4c, #mid5c {
+  left: 45%;
+  top: -75%;
+}
+
+
+#stem1, #stem2, #midstem, #midstem2, #midstem3, #midstem4, #midstem5 {
+  background-color: black;
+  height: 40%;
+  width: 10%;
+  position: relative;
+    left: 44%;
+    top: -95%;
+}
+
+#clubholder1 {
+  left: 0.5em;
+  top: 0.5em;
+}
+
+#clubnumber1 {
+  position: relative;
+    left: 1em;
+    top: 0.5em;
+}
+
+#midclubox1 {
+  left: 20%;
+  top: -15%;
+}
+
+#midclubox2 {
+  left: 50%;
+  top: -40%;
+}
+
+#midclubox3 {
+  left: 35%;
+  top: -40%;
+}
+
+#midclubox4 {
+  left: 20%;
+  top: -40%;
+}
+
+#midclubox5 {
+  left: 50%;
+  top: -65%;
+}
+
+#clubnumber2 {
+  position: relative;
+    left: -0.85em;
+    top: -13.25em; 
+}
+
+#clubholder2 {
+  left: 10em;
+  top: -13.5em;
+}
+
+#title {
+  color: red;
+  text-align: center;
+  text-shadow: 0.2em 0.1em 0.1em black;
+}
+
+.cardback, .cardback2, .cardback3, .cardback4, .cardback5, .cardback6 {
+  border: 1px solid black;
+  border-radius: 2em;
+  box-shadow: 0.2em 0.2em 0.1em #003200;
+  display: inline-block;
+  height: 250px;
+  width: 200px;
+}
+
+#cardpatternA {
+  /* my own pattern */
+  background-size: 50px 50px;
+  background-color: #c16;
+  background-image: webkit-linear-gradient(78deg, rgba(255, 255, 255, .2) 25%, transparent 25%);
+  background-image: moz-linear-gradient(78deg, rgba(255, 255, 255, .2) 25%, transparent 25%);
+  background-image: linear-gradient(12deg, rgba(255, 255, 255, .2) 25%, transparent 25%);
+  pie-background: linear-gradient(12deg, rgba(255, 255, 255, .2) 25%, transparent 25%);
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternB {
+  /* my own pattern */
+  background-size: 50px 50px;
+  background-color: #b52;
+  background-image: webkit-linear-gradient(15deg, rgba(255, 255, 255, .2) 25%, transparent 75%);
+  background-image: (15deg, rgba(255, 255, 255, .2) 25%, transparent 75%);
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, .2) 25%, transparent 75%);
+  pie-background: linear-gradient(75deg, rgba(255, 255, 255, .2) 25%, transparent 75%);
+  behavior: url(/pie/PIE.htc);
+}
+
+.cardback {
+  /* Thanks to Atle Mo and Sebastien Grosjean for the 'Carbon' gradient pattern altered here from css3pie.com */
+    background: 
+      -webkit-linear-gradient(63deg, #560000 5px, transparent 5px) 0 5px,
+      -webkit-linear-gradient(243deg, #560000 5px, transparent 5px) 10px 0px,
+      -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -webkit-linear-gradient(0deg, #560000 10px, transparent 10px),
+      -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #800000 75%, #800000);
+    background: 
+      -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -moz-linear-gradient(0deg, #560000 10px, transparent 10px),
+      -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #800000 75%, #800000);
+   background: 
+     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+     linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+     linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+     linear-gradient(90deg, #560000 10px, transparent 10px),
+     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #800000 75%, #800000);
+  background-size: 20px 20px;
+  background-color: #131313;
+  -pie-background: 
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px / 20px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px / 20px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px / 20px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px / 20px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px) 0 0 / 20px,
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424) 0 0 / 20px #131313;
+behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternD {
+  background: 
+      -webkit-linear-gradient(63deg, white 5px, transparent 5px) 0 5px,
+      -webkit-linear-gradient(243deg, white 5px, transparent 5px) 10px 0px,
+      -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -webkit-linear-gradient(0deg, white 10px, transparent 10px),
+      -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: 
+      -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -moz-linear-gradient(0deg, white 10px, transparent 10px),
+      -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+   background: 
+     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+     linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+     linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+     linear-gradient(90deg, white 10px, transparent 10px),
+     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-size: 20px 10px;
+  background-color: #131313;
+  -pie-background: 
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px / 20px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px / 20px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px / 20px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px / 20px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px) 0 0 / 20px,
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424) 0 0 / 20px #131313;
+behavior: url(/pie/PIE.htc);
+}
+
+.cardback2 {
+  /* Thanks to Nicolas Gallagher, creator of 'Steps' gradient pattern altered here from css3pie.com */
+  background-color: #6D9EE3;
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px, 0px 36px, 4px 2px, 29px 6px, 33px 30px;
+background-image: 
+  -webkit-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(295deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(295deg, #0F3E7F 10px, transparent 10px);
+background-image: 
+  -moz-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(295deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(295deg, #0F3E7F 10px, transparent 10px);
+background-image: 
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px);
+-pie-background: 
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px) 0 2px / 58px,
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px) 4px 35px / 58px,
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px) 29px 31px / 58px,
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px) 33px 6px / 58px,
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px) 0 36px / 58px,
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px) 4px 2px / 58px,
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px) 29px 6px / 58px,
+  linear-gradient(155deg, #0F3E7Fransparent 10px) 33px 30px / 58px,
+  #FF7D9D;
+behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternE {
+  background-color: darkred;
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px, 0px 36px, 4px 2px, 29px 6px, 33px 30px;
+background-image: 
+  -webkit-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(295deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(295deg, #0F3E7F 10px, transparent 10px);
+background-image: 
+  -moz-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(295deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(295deg, #0F3E7F 10px, transparent 10px);
+background-image: 
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px);
+-pie-background: 
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px) 0 2px / 58px,
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px) 4px 35px / 58px,
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px) 29px 31px / 58px,
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px) 33px 6px / 58px,
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px) 0 36px / 58px,
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px) 4px 2px / 58px,
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px) 29px 6px / 58px,
+  linear-gradient(155deg, #0F3E7Fransparent 10px) 33px 30px / 58px,
+  #FF7D9D;
+behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternJ {
+   background-color: #89ff89;
+  background-size: 48px 48px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px, 0px 36px, 4px 2px, 29px 6px, 33px 30px;
+background-image: 
+  -webkit-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -webkit-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(295deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -webkit-linear-gradient(295deg, #0F3E7F 10px, transparent 10px);
+background-image: 
+  -moz-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(115deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(295deg, #0F3E7F 23px, transparent 23px),
+  -moz-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(295deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(115deg, #0F3E7F 10px, transparent 10px),
+  -moz-linear-gradient(295deg, #0F3E7F 10px, transparent 10px);
+background-image: 
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px),
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px),
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px);
+-pie-background: 
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px) 0 2px / 58px,
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px) 4px 35px / 58px,
+  linear-gradient(335deg, #0F3E7F 23px, transparent 23px) 29px 31px / 58px,
+  linear-gradient(155deg, #0F3E7F 23px, transparent 23px) 33px 6px / 58px,
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px) 0 36px / 58px,
+  linear-gradient(155deg, #0F3E7F 10px, transparent 10px) 4px 2px / 58px,
+  linear-gradient(335deg, #0F3E7F 10px, transparent 10px) 29px 6px / 58px,
+  linear-gradient(155deg, #0F3E7Fransparent 10px) 33px 30px / 58px,
+  #FF7D9D;
+behavior: url(/pie/PIE.htc);
+}
+
+.cardback3 {
+  /* Thanks to Lea Verou, creator of 'Japanese Cube' gradient pattern from css3pie.com. Used here as original, with some color mods. */
+  background-color:#556;
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-image: 
+    -webkit-linear-gradient(60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    -webkit-linear-gradient(-60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    -webkit-linear-gradient(60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    -webkit-linear-gradient(-60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    -webkit-linear-gradient(30deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+    -webkit-linear-gradient(30deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+background-image: 
+  -moz-linear-gradient(60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  -moz-linear-gradient(-60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  -moz-linear-gradient(60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  -moz-linear-gradient(-60deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  -moz-linear-gradient(30deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+  -moz-linear-gradient(30deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+background-image: 
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 0 0,
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 0 0,
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 40px 70px,
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 40px 70px,
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a) 0 0,
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a) 40px 70px / 80px 140px;
+-pie-background: 
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 0 0 / 80px 140px,
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 0 0 / 80px 140px,
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 40px 70px / 80px 140px,
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445) 40px 70px / 80px 140px,
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a) 0 0 / 80px 140px,
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a) 40px 70px / 80px 140px,
+    #556;
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternC2 {
+  background-color:#9d9d00;
+  background-size: 10px 70px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-image: 
+    -webkit-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d),
+    -webkit-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d);
+background-image: 
+  -moz-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d),
+  -moz-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d);
+background-image: 
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0,
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 0 0,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 40px 70px / 80px 140px;
+-pie-background: 
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0 / 80px 140px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0 / 80px 140px,
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px / 80px 140px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px / 80px 140px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 0 0 / 80px 140px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 40px 70px / 80px 140px,
+    #9d9d00;
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternC {
+  background-color:#9d9d00;
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-image: 
+    -webkit-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d),
+    -webkit-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d);
+background-image: 
+  -moz-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d),
+  -moz-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d);
+background-image: 
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0,
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 0 0,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 40px 70px / 80px 140px;
+-pie-background: 
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0 / 80px 140px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0 / 80px 140px,
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px / 80px 140px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px / 80px 140px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 0 0 / 80px 140px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 40px 70px / 80px 140px,
+    #9d9d00;
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternC3 {
+  background-color:#888;
+  background-size: 40px 90px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-image: 
+    -webkit-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+    -webkit-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d),
+    -webkit-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d);
+background-image: 
+  -moz-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(-60deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00),
+  -moz-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d),
+  -moz-linear-gradient(30deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d);
+background-image: 
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0,
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 0 0,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 40px 70px / 80px 140px;
+-pie-background: 
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0 / 80px 140px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 0 0 / 80px 140px,
+  linear-gradient(30deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px / 80px 140px,
+  linear-gradient(150deg, #ffff00 12%, transparent 12.5%, transparent 87%, #ffff00 87.5%, #ffff00) 40px 70px / 80px 140px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 0 0 / 80px 140px,
+  linear-gradient(60deg, #ffff9d 25%, transparent 25.5%, transparent 75%, #ffff9d 75%, #ffff9d) 40px 70px / 80px 140px,
+    #9d9d00;
+  behavior: url(/pie/PIE.htc);
+}
+
+.cardback4 {
+  /* Thanks to Randy Merrill, creator of 'Cicada Stripes' gradient pattern from css3pie.com which I altered here */
+  background-color: #FD8301;
+  background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
+  background-image: 
+    -webkit-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+    -webkit-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+    -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+    -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+background-image: 
+  -moz-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+  -moz-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+  -moz-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+  -moz-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+background-image: 
+  linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+-pie-background: 
+  linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%) 0 0 / 13px,
+  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%) 0 0 / 29px,
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%) 0 0 / 37px,
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%) 0 0 / 53px,
+  #FD8301;
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternI {
+  background-color: blue;
+  background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
+  background-image: 
+    -webkit-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+    -webkit-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+    -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+    -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+background-image: 
+  -moz-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+  -moz-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+  -moz-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+  -moz-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+background-image: 
+  linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+-pie-background: 
+  linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%) 0 0 / 13px,
+  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%) 0 0 / 29px,
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%) 0 0 / 37px,
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%) 0 0 / 53px,
+  blue;
+  behavior: url(/pie/PIE.htc);
+}
+
+.cardback5 {
+  background-size: 50px 50px;
+  background-color: #411545;
+  background-image: 
+    -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent);
+  background-image: 
+    -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent);
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent);
+  -pie-background: 
+    linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent) 0 0 / 50px 50px, #411545;
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternF {
+  background-size: 100px 100px;
+  background-color: #c16;
+  background-image: webkit-linear-gradient(15deg, rgba(255, 255, 255, .6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%);
+  background-image: moz-linear-gradient(15deg, rgba(255, 255, 255, .6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%);
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, .6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%);
+  pie-background: linear-gradient(75deg, rgba(255, 255, 255, .6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%);
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternG {
+  background-size: 50px 100px;
+  background-color: #516;
+  background-image: webkit-linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  background-image: moz-linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  pie-background: linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  behavior: url(/pie/PIE.htc);
+}
+
+#cardpatternH {
+  background-size: 100px 100px;
+  background-color: #516;
+  background-image: webkit-linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  background-image: moz-linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  pie-background: linear-gradient(45deg, rgba(255, 255, 255, 1.0) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 1.0) 75%, transparent 75%);
+  behavior: url(/pie/PIE.htc);
+}
+
+.rotate {
+  /* Safari */
+-webkit-transform: rotate(-180deg);
+
+/* Firefox */
+-moz-transform: rotate(-180deg);
+
+/* IE */
+-ms-transform: rotate(-180deg);
+
+/* Opera */
+-o-transform: rotate(-180deg);
+
+}
+
+.rotate2 {
+   /* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+
+}
+
+.rotate3 {
+     /* Safari */
+-webkit-transform: rotate(90deg);
+
+/* Firefox */
+-moz-transform: rotate(90deg);
+
+/* IE */
+-ms-transform: rotate(90deg);
+
+/* Opera */
+-o-transform: rotate(90deg);
+}

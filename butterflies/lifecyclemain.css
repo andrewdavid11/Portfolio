@@ -1,0 +1,311 @@
+/*Butterfly Life Cycle Final Project */
+
+body {
+  background: url("images/wingsquare1.jpg");
+}
+  
+h1, h2, h3, footer {
+  text-align: center;
+  background: coral;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  clear: both;
+}
+  
+h1 {
+  width: 100%;
+}
+  
+h2 {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+h3 {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+ }
+  
+  
+figure {
+  display: block;
+  text-align: center;
+}
+  
+form legend {
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5em;
+}
+  
+input:focus {
+  background: coral;
+}
+  
+table {
+  border-collapse: collapse;
+}
+  
+td {
+  border: 1px solid black;
+  padding: 0.2em;
+}
+  
+th {
+  border: 1px solid black;
+  padding: 0.2em;
+}
+  
+textarea:focus {
+  background: coral;
+}
+
+#backtop {
+  background: cornflowerblue;
+  text-align: center;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+#skipnav {
+  background: cornflowerblue;
+  width: 10em;
+  padding: 0.2em;
+  margin: 0 0 2em 0;
+  text-align: center;
+  position: absolute;
+  right: 3em; 
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+a:link, a:visited  {
+  color: lemonchiffon;
+}
+
+a:hover {
+  color: coral;
+}
+
+a:active {
+  color: white;
+}
+  
+#bg {
+  float: right;
+  margin-bottom: 3em;
+}
+
+#bg2 {
+}
+  
+#blue {
+  float: left;
+}
+  
+#box {
+  background: lemonchiffon;
+  padding: 1em;
+  margin-bottom: 1.25em;
+  margin: 2em;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  top: -0.75em;
+}
+
+#butterflies input {
+  display: block;
+  width: 75%;
+}
+
+#camo {
+  position: relative;
+}
+
+#centerme {
+  text-align: center;
+  }
+  
+#contactinfo input {
+  display: block;
+}
+
+#corny {
+  background: cornflowerblue;
+}
+
+#crawl {
+  float: left;
+}
+
+#eggs {
+  float: left;
+  margin-right: 1em;
+}
+
+  
+#greentan {
+  margin-right: auto;
+  margin-left: auto;
+  }
+  
+#holdvid {
+  text-align: center;
+}
+  
+#maybe:before {
+  content: url("images/iconbw.jpg")
+}
+
+
+#navbar {
+  background: cornflowerblue;
+  padding: 0.3em;
+  text-align: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+#navbar li {
+  display: inline-block;
+  list-style-type: none;
+  padding-right: 0.25em;
+  padding-left: 0.25em;
+  }
+#oneegg {
+  }
+#othernav {
+  text-align: center;
+  width: 90%;
+  margin-top: 10%;
+  margin-left: 5%;
+  background: cornflowerblue;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  }
+#othernav li {
+  display: inline-block;
+  padding: 1%;
+  }
+  
+#redmeupscotty {
+  color: red;
+}
+  
+#redpill {
+  float: right;
+  clear: right;
+}
+  
+#reef {
+  background: coral;
+}
+  
+#seasons_table {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#special_link {
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	font-size: 1.33em;
+	clear: both;
+	padding-top: 0.66em;
+}
+
+	#special_link a {
+		color: cornflowerblue;
+	}
+	
+	#special_link a:hover {
+		color: coral;
+	}
+
+#spots {
+  float: right;
+}
+  
+#stories textarea {
+  display: block;
+  margin-bottom: 5em;
+}
+  
+#stripes {
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+#submitbutton {
+  text-align: center;
+  background: cornflowerblue;
+}
+  
+#tan {
+  position: relative;
+}
+
+#text-area {
+  position: absolute;
+  left: 20px;
+}
+  
+#xray1 {
+  position: relative;
+}
+  
+#xray2 {
+  position: relative;
+}
+  
+.ast {
+  color: red;
+}
+  
+.bold {
+  font-weight: bold;
+}
+  
+.maintext {
+  text-align: left;
+}
+  
+.maintext p {
+  padding: 0.4em;
+}
+
+.boldly {
+  font-weight: bold;
+}
+  
+.rightnext {
+  text-align: right;
+}
+
+.sci {
+  font-style: italic;
+}
+
+.scibold {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.yes {
+  background: lightgrey; 
+}

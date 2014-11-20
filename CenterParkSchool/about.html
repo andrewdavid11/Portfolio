@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head>
+  <title>Center Park School: About</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <link rel="stylesheet" type="text/css" href="centerPark.css" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	function callFact() {
+	
+	var picker = Math.floor(Math.random()*9);
+	
+	var facts = new Array(10);
+	facts[0] = "Center Park School was founded in 1925.";
+	facts[1] = "Center Park School was originally a single school room with a small wood-burning stove and no blackboard.";
+	facts[2] = "Center Park School founder William Hignatium once said that colored chalk was the plaything of Lucifer himself.";
+	facts[3] = "Center Park School has several famous alumns, including actress Mary Timson, and religious cult leader Swenson Dandy.";
+	facts[4] = "All asbestos was removed from school walls in 1975, during the first major modern renovation.";
+	facts[5] = "Center Park School's famous well was used to provide all water for students and classrooms until 1952 when the staff and student body more than doubled in one term.";
+	facts[6] = "The original school room was not torn down, but remains as an exhibit in the center of the courtyard.  Yes tours are available.";
+	facts[7] = "The school's longest tenured teacher was Oliver Clyde Pumel, who taught here from 1931 through 2002.";
+	facts[8] = "The school's debate team was twice removed from the budget during cuts, only to be restored after a debate between faculty and the students on the team.";
+	facts[9] = "Center Park School is the only school in the district more than 10 years old to never have gone through a name change.";
+	
+	document.getElementById('fast_facts').innerHTML = "<h2>Fast Facts</h2><p>" +facts[picker] + "</p>";
+	}
+	/* ]]> */
+	</script>
+</head>
+<body onload="callFact();">
+  <div class="skipnav"></div>
+  <div class="container">
+	<div class="header">
+		<div class="header_left">
+			<form id="selectSchool">
+			  <p>
+				<select name="districtList">
+					<option>Pocahontas District Options</option>
+					<option>District Home</option>
+					<option>Middle Brook Elementary</option>
+					<option>Tower Tall High School</option>
+					<option>Summer Grove Junior High</option>
+					<option>Cherry Orchard Elementary</option>
+					<option>Center Park School</option>
+				</select>
+			  </p>
+			</form>
+		</div>
+		<div class="header_central">
+			<h1>Center Park School</h1><p><em>Home of the Hammerin Hippos</em></p>
+		</div>
+		<div class="header_right">
+			<form id="loginForm"> 
+				<p>User Name:<input type="text" name="UserName" size="10"/><br />
+				&nbsp;&nbsp;&nbsp;Password:<input type="password" name="password" size="10" /><br />
+				<input type="button" value="Sign In" /></p> 
+			</form>
+		</div>
+	</div> <!-- ends the header div --> 
+	<div class="title">
+		<div class="title_left">
+			<img class="thumb"  src="images/school_front.jpg" alt="school logo of a Hammerin Hippo" />
+			<img class="thumb"  src="images/hippo_logo.jpg"alt="picture of the school"  />
+		</div>	
+		<div class="title_right">
+	        <form>
+				<p>
+				   <input type="text" id="search_field" name="search" placeholder="Search this Site..." />
+				   <a id="mag_glass"><img src="images/mag_glass.jpg" alt="Search" height="20" width="20" /></a>
+				</p>
+		    </form>
+			<p>
+				1100 W Center Park Dr.<br />
+				Hutto, UT 84000<br /><strong>Phone:</strong> 801-555-4321<br />
+				<strong>Fax:</strong>801-555-9876
+			</p>
+		</div>
+	</div>
+	<div class="box">
+		<nav>
+			 <a href="index.html">Home</a>
+			 <a href="about.html">About Us</a>
+			 <a href="">Administration</a>
+			 <a href="">Counseling</a>
+			 <a href="">Faculty</a>
+			 <a href="">Policies</a>
+			 <a href="">Recognition</a>
+			 <a href="registration.html">Registration</a>
+		</nav>
+		<div class="box_inner">
+		<h2>All About Center Park School</h2>
+		<h3>History</h3>
+		<p>Center Park School was founded in 1925 by William Orator Hignatium and his fiancee, Sarah Eliza Doolittle.
+		The school was originally a single room and the first teachers were the founders themselves.  Subjects taught were reading, writing and arithmetic.
+		Expansion and modernization to the present buildings began shortly after WW2, in 1948, and renovations have taken place
+		in 1975 and 2003.  There have been 11 schoolmasters and principals.</p><br />
+		<h3>Awards and Accomplishments</h3>
+		<p>Center Park School's Debate Team took top honors in the county in 2007,2008,2010, and 2013.  
+		Students have won 26 blue ribbons as entrants to the state fair in the past decade.
+		The school girls soccer team took the state 3A Junior Elementary Championship in 2012.
+		The boys football team won the division title in 2009 and 2013.</p><br />
+		<h3>Faculty and Staff</h3>
+		<p>The present school principal is <a href="principal.html">Thadeus Swart</a>.</p>
+		<p>The present school vice-principal is <a href="vice.html">Susan Artsky</a></p>
+		<p>There are <a href="directory.html">49 dedicated teachers</a> working with the children of Center Park School. 
+		They come from right here in Hutto, to as far away as Anchorage, AK and Miami, FL, because Center Park is such a great place
+		to work, and Hutto is such a great place to live.</p><br />
+		</div>
+		<div id="fast_facts">
+		</div>
+	</div>
+</div> <!-- closes the container div -->
+<footer>
+  <ul>
+    <li><a href="">Questions or Feedback?</a></li>
+	<li>|</li>
+    <li><a href="termsofuse.pdf">Terms of Use</a></li>
+	<li>|</li>
+    <li><a href="privacypolicy.pdf">Privacy Policy</a></li>
+  </ul>
+  <p>Design by Andrew David; All content &copy; 2014 Center Park School Project</p>
+</footer>
+</body>
+</html>

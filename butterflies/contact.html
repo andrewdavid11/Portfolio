@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A quick and easy form to submit stories, tips, or suggestions to the site, and email information for the webmaster." />
+    <title>Contact information and a content submission form for the butterfly site.</title>
+    <link rel="stylesheet" type="text/css" href="lifecyclemain.css" />
+  </head>
+  <body>
+    <div id="box">
+     <nav>
+      <ul id="navbar">
+        <li><img src="images/iconbw.jpg" width="30" height="20" alt="" title="" /><a href="index.html">Home</a></li>
+        <li><img src="images/iconbw.jpg" width="30" height="20" alt="" title="" /><a href="eggstage.html">Life Cycle</a></li>
+        <li><img src="images/iconbw.jpg" width="30" height="20" alt="" title="" /><a href="variety.html">Variety</a></li>
+        <li><img src="images/iconbw.jpg" width="30" height="20" alt="" title="" /><a href="flight.html">Flight</a></li>
+        <li><img src="images/iconbw.jpg" width="30" height="20" alt="" title="" /><a href="watching.html">Watching</a></li>
+        <li><img src="images/iconcolor.jpg" width="30" height="20" alt="" title="" /><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <h1>Contribute to the site</h1>
+    <h2>Want to help improve "Butterflylifecycle.org"?  Here is your chance.</h2>
+    <article>
+       <p>Fill out the form below for your chance to be a contributor on the site.  We are looking for comments, suggestions, corrections, and stories from all
+          the butterfly fans out there.  We will be adding a "Stories and Tips" page soon with the best submissions we receive.
+       </p>
+       <p>Fields marked with a<span class="ast"> *</span> are required</p>
+    </article>
+    <form>
+      <fieldset id="contactinfo">
+        <legend>About you</legend>
+        <label>
+          First Name<span class="ast">*</span>
+          <input type="text" name="first" id="firstinput" required="required" placeholder="Joe" />
+        </label>
+        <label>
+          Last Name
+          <input type="text" name="last" id="lastinput" placeholder="Sixpack" />
+        </label>
+        <label>
+          Location<span class="ast">*</span>
+          <input type="text" name="location" id="locationinput" required="required" />
+        </label>
+        <label>
+          Email<span class="ast">*</span>
+          <input type="email" name="email" id="emailinput" required="required" />
+        </label>
+      </fieldset>
+      <fieldset id="butterflies">
+        <legend>Butterflies you have seen alive</legend>
+        <label>
+          My favorite sightings in the wild
+          <input type="text" name="wild" id="wildinput" />
+         </label>
+         <label>
+          My favorite sightings in zoos and captivity
+         <input type="text" name="zoo" id="zooinput" />
+      </fieldset>
+      <fieldset id="stories">
+        <legend>Your story or tip</legend>
+        <label>
+           My Story
+           <textarea id="story" name="story" rows="5" cols="65"></textarea>
+        </label>
+        <label>
+           My Tip
+           <textarea id="tip" name="tip" rows="3" cols="65"></textarea>
+        </label>
+        <label>
+           My Suggestion
+           <textarea id="suggest" name="suggest" rows="2" cols="65">I think the site would be improved by...</textarea>
+        </label>
+      </fieldset>
+      <fieldset id="submitbutton">
+        <input type="submit" id="submit" value="Submit now" />
+      </fieldset>
+    </form>
+    <article>
+      <p id="backtop"><a href="#box">Back to Top</a></p>
+    </article>
+    <footer>
+        <span class="boldly">Designed and Developed By</span> Andrew David Hodgson in May 2013
+    </footer>
+    </div>
+  </body>
+</html> 

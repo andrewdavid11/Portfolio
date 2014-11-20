@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head>
+  <title>Center Park School: Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <link rel="stylesheet" type="text/css" href="centerPark.css" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	  var afterSchoolPics = new Array(4);
+	  var currentPic = 0;
+	  afterSchoolPics[0] = "images/banner0.jpg";
+	  afterSchoolPics[1] = "images/banner1.jpg";
+	  afterSchoolPics[2] = "images/banner2.jpg";
+	  afterSchoolPics[3] = "images/banner3.jpg";
+	  
+	function afterSchoolRotate() {
+	  if (currentPic == 3)
+	     currentPic =0;
+	  else
+	     ++currentPic;
+	  document.images[3].src = afterSchoolPics[currentPic];
+	}
+	/* ]]> */
+	</script>
+</head>
+<body onload="setInterval('afterSchoolRotate()', 5000);">
+  <div class="skipnav"></div>
+  <div class="container">
+	<div class="header">
+		<div class="header_left">
+			<form id="selectSchool">
+			  <p>
+				<select name="districtList">
+					<option>Pocahontas District Options</option>
+					<option>District Home</option>
+					<option>Middle Brook Elementary</option>
+					<option>Tower Tall High School</option>
+					<option>Summer Grove Junior High</option>
+					<option>Cherry Orchard Elementary</option>
+					<option>Center Park School</option>
+				</select>
+			  </p>
+			</form>
+		</div>
+		<div class="header_central">
+			<h1>Center Park School</h1><p><em>Home of the Hammerin Hippos</em></p>
+		</div>
+		<div class="header_right">
+			<form id="loginForm"> 
+				<p>User Name:<input type="text" name="UserName" size="10"/><br />
+				&nbsp;&nbsp;&nbsp;Password:<input type="password" name="password" size="10" /><br />
+				<input type="button" value="Sign In" /></p> 
+			</form>
+		</div>
+	</div> <!-- ends the header div --> 
+	<div class="title">
+		<div class="title_left">
+			<img class="thumb"  src="images/school_front.jpg" alt="school logo of a Hammerin Hippo" />
+			<img class="thumb"  src="images/hippo_logo.jpg"alt="picture of the school"  />
+		</div>	
+		<div class="title_right">
+	        <form>
+				<p>
+				   <input type="text" id="search_field" name="search" placeholder="Search this Site..." />
+				   <a id="mag_glass"><img src="images/mag_glass.jpg" alt="Search" height="20" width="20" /></a>
+				</p>
+		    </form>
+			<p>
+				1100 W Center Park Dr.<br />
+				Hutto, UT 84000<br /><strong>Phone:</strong> 801-555-4321<br />
+				<strong>Fax:</strong>801-555-9876
+			</p>
+		</div>
+	</div>
+	<div class="box">
+		<nav>
+			 <a href="index.html">Home</a>
+			 <a href="about.html">About Us</a>
+			 <a href="">Administration</a>
+			 <a href="">Counseling</a>
+			 <a href="">Faculty</a>
+			 <a href="">Policies</a>
+			 <a href="">Recognition</a>
+			 <a href="registration.html">Registration</a>
+		</nav>
+		<div class="box_leftcolumn">
+		  <ul>
+			<li><a href="">Community Council</a></li>
+			<li><a href="">Bell Schedules</a></li>
+			<li><a href="afterschool.html">After School Programs</a></li>
+			<li><a href="">School Breakfast Program</a></li>
+			<li><a href="">Upcoming Lunch Menus</a></li>
+			<li><a href="">Anti-Bullying Policy</a></li>
+			<li><a href="">Student Government Forms</a></li>
+			<li><a href="">Online Learning Options</a></li>
+			<li><a href="">Math Help Resources</a></li>
+			<li><a href="">Translation Resources</a></li>
+			<li><a href="">Vending Machine Information</a></li>
+		  </ul>
+		</div> <!-- ends the left column of the central box -->
+		<div class="box_rightcolumn">
+			<div id="banner">
+			  <a href="afterschool.html"><img src="images/banner0.jpg" alt="Image links to After School Programs" /></a>
+			  <p><a href="afterschool.html">Learn about extra curricular activity options!</a></p>
+			</div>
+			<div class="latestnews">
+			  <table>
+				<tr>
+				<td><h3>Latest News</h3><p>This div allows for quick and easy updates without changing the bulk of the page.</p>
+					<p>No school on Thanksgiving Holiday.</p>
+					<img src="images/twitter.jpg" height="30" width="30" alt="twitter RSS button link" /></td>
+				 <td><h4>Emergency Info</h4><p>In case of an emergency, check here for more information.</p>
+					 <h4>Follow Us</h4><p>Stay connected with Center Park District with the social media buttons below</p>
+					 <table id="rss"><tr>
+					   <td><img src="images/facebookbutton.jpg" height="50" width="100" alt="Facebook button link" /></td>
+					   <td><img src="images/twitter.jpg" height="30" width="30" alt="Twitter button" /></td>
+					   <td><img src="images/youtube.jpg" height="30" width="60" alt="Youtube link" /></td>
+					 </tr></table>
+				 </td>
+				</tr>
+			  </table>
+			</div> <!-- closes the latest news div -->
+		</div> <!-- closes the right column div -->
+	</div> <!-- closes the box div -->
+	<div class="upcomingEvents">
+	   <h3>Upcoming Events</h3>
+		  <ul>
+			<li><strong>Nov 26:</strong>Thanksgiving Pageant- 7pm</li>
+			<li><strong>Nov 27:</strong>Thanksgiving Holiday- No School</li>
+			<li><strong>Dec 7:</strong>PTA Meeting - 7pm</li>
+		  </ul>
+		  <p class="specialOrangeLink">View Detailed Calendar</p>
+	</div>
+</div> <!-- closes the container div -->
+<footer>
+  <ul>
+    <li><a href="">Questions or Feedback?</a></li>
+	<li>|</li>
+    <li><a href="termsofuse.pdf">Terms of Use</a></li>
+	<li>|</li>
+    <li><a href="privacypolicy.pdf">Privacy Policy</a></li>
+  </ul>
+  <p>Design by Andrew David; All content &copy; 2014 Center Park School Project</p><br />
+</footer>
+</body>
+</html>

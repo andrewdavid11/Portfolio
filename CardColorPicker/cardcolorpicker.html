@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="cardcolorpicker.css" />
+	<script>
+		function myFunction() {
+			//var grabSpan = document.getElementById('pudding');
+			var selectID = document.forms['BuyCard'].elements['PickColor'].selectedIndex;
+			var selectVal = document.forms['BuyCard'].elements['PickColor'][selectID].value;
+			var splitVal = selectVal.split(' | ');
+			var useThis = splitVal[2];
+			
+			//grabSpan.innerHTML = useThis;
+			
+			var frame = document.getElementsByClassName('bigPicWrap')[0];
+			var cardbody = document.getElementById('forSale');
+			
+			cardbody.style.border = 'none';
+			cardbody.style.borderRadius = '0';
+			cardbody.style.padding = '4em';
+			
+			switch(useThis) {
+			  case "Black":
+				frame.style.backgroundColor = "#000000";
+				frame.style.border = "1px solid #fff";
+				break;
+			  case "Red":
+				frame.style.backgroundColor = "#e60000";
+				break;
+			  case "Burgundy":
+				frame.style.backgroundColor = "#800000";
+				break;
+			  case "BtOrange":
+				frame.style.backgroundColor = "#ff3300";
+				break;
+			  case "Orange":
+				frame.style.backgroundColor = "#e65c00";
+				break;
+			  case "Yellow":
+				frame.style.backgroundColor = "#ffff00";
+				break;
+			  case "DkGreen":
+				frame.style.backgroundColor = "#003300";
+				break;
+			  case "LtGreen":
+				frame.style.backgroundColor = "#808000";
+				break;
+			  case "DkBlue":
+				frame.style.backgroundColor = "#000066";
+				break;
+			  case "LtBlue":
+				frame.style.backgroundColor = "#336699";
+				break; 
+			  case "Purple":
+				frame.style.backgroundColor = "#520052";
+				break;
+			  case "White":
+				frame.style.backgroundColor = "#ffffff";
+				break;
+			  case "Silver":
+				frame.style.backgroundColor = "#c0c0c0";
+				break;
+			  case "Grey":
+				frame.style.backgroundColor = "#45452e";
+				break;
+			  case "Brown": 
+				frame.style.backgroundColor = "#663300";
+				break;
+			  case "Tan":
+				frame.style.backgroundColor = "#996633";
+				break;
+			  case "HotPink":
+				frame.style.backgroundColor = "#ff1975";
+				break;
+			  case "LtPink":
+				frame.style.backgroundColor = "#ff6666";
+				break;  	  
+		  } //ends my switch		
+		}
+	</script>
+</head>
+<body>
+	<div class="rightColumn">
+		<header>
+			<h1>A Simple Card Color Preview App</h1>
+			<h3>Styled after hikephotos.com</h3>
+		</header>
+		<div class="bigPicWrap">
+			<img id="forSale" src="Images/AltaAspensTall.jpg" />
+		</div>
+		<div class="orderForms">
+			<h3>Want to buy this photo on a card?</h3>
+			<p>Choose from the color options below to preview what your card would look like.</p>
+			<p><span id="pudding"></span>
+			These colors may not exactly match the cardstock I use, but are as close as digital display can get.
+			</p>
+		<form name="BuyCard"> 
+	  	 <p>
+	     <select name="PickColor" class="button_left" onchange="myFunction()">
+	      <option value="" selected="selected">Card Color Options</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Black">Black</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Red">Red</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Burgundy">Burgundy</option>		  
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | BtOrange">Bright Orange</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Orange">Crushed Orange</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Yellow">Yellow</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | DkGreen">Dark Green</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | LtGreen">Light Green</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | DkBlue">Dark Blue</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | LtBlue">Light Blue</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Purple">Purple</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | White">White</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Silver">Silver</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Grey">Grey</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Brown">Brown</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Tan">Tan</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | HotPink">Hot Pink</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | LtPink">Light Pink</option>
+		  <option value="<?=$ThisPic['ID_num'] ?> | Card | Wild">Surprise Me!</option>
+		</select>&nbsp;
+		<input type="hidden" name="card-submitted" value="yes" /> 
+		<input type="submit" name="submit-card" value="Add to Cart" class="button_right" />
+		<br /></p>
+	  </form>
+	   <div class="footer">
+		<p>This feature may be added to my real website hikephotos.com as an optional pop-up feature.<br />
+		The trouble is controlling the shape and size of a div filled with nothing but dynamic data
+		and images of varying proportions from a database.</p>
+	  </div>
+	  </div>
+	 
+	</div>
+</body>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head>
+  <title>Center Park School: Dynamic Calendar</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <link rel="stylesheet" type="text/css" href="centerPark.css" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+function displayCalendar(){
+ 
+ var htmlContent ="";
+ var FebNumberOfDays ="";
+ var counter = 1;
+ 
+ var dateNow = new Date();
+ var month = dateNow.getMonth();
+
+ var nextMonth = month+1; //+1; //Used to match up the current month with the correct start date.
+ var prevMonth = month -1;
+ var day = dateNow.getDate();
+ var year = dateNow.getFullYear();
+ 
+ //Determine if February (28,or 29)  
+ if (month == 1){
+    if ( (year%100!=0) && (year%4==0) || (year%400==0)){
+      FebNumberOfDays = 29;
+    }else{
+      FebNumberOfDays = 28;
+    }
+ }
+ 
+ // names of months and week days.
+ var monthNames = ["January","February","March","April","May","June","July","August","September","October","November", "December"];
+ var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday", "Saturday"];
+ var dayPerMonth = ["31", ""+FebNumberOfDays+"","31","30","31","30","31","31","30","31","30","31"]
+ 
+ // days in previous month and next one , and day of week.
+ var nextDate = new Date(nextMonth +' 1 ,'+year);
+ var weekdays= nextDate.getDay();
+ var weekdays2 = weekdays
+ var numOfDays = dayPerMonth[month];
+     
+ // this leave a white space for days of previous month.
+ while (weekdays>0){
+    htmlContent += "<td class='monthPre'></td>";
+ 
+ // used in next loop.
+     weekdays--;
+ }
+ 
+ // loop to build the calander body.
+ while (counter <= numOfDays){
+ 
+     // When to start new line.
+    if (weekdays2 > 6){
+        weekdays2 = 0;
+        htmlContent += "</tr><tr>";
+    }
+ 
+    // if counter is current day.
+    // highlight current day using the CSS defined in header.
+    if (counter == day){
+        htmlContent +="<td class='dayNow'  onMouseOver='this.style.background=\"#FF0000\"; this.style.color=\"#FFFFFF\"' "+
+        "onMouseOut='this.style.background=\"#FFFFFF\"; this.style.color=\"#00FF00\"'>"+counter+"</td>";
+    }else{
+        htmlContent +="<td class='monthNow' onMouseOver='this.style.background=\"#FF0000\"'"+
+        " onMouseOut='this.style.background=\"#FFFFFF\"'>"+counter+"</td>";    
+ 
+    }
+    
+    weekdays2++;
+    counter++;
+ }
+ 
+ // building the calendar html body.
+ var calendarBody = "<table class='calendar'> <tr class='monthNow'><th colspan='7'>"
+ +monthNames[month]+" "+ year +"</th></tr>";
+ calendarBody +="<tr class='dayNames'>  <td>Sun</td>  <td>Mon</td> <td>Tues</td>"+
+ "<td>Wed</td> <td>Thurs</td> <td>Fri</td> <td>Sat</td> </tr>";
+ calendarBody += "<tr>";
+ calendarBody += htmlContent;
+ calendarBody += "</tr></table>";
+ // set the content of div .
+ document.getElementById("calendar").innerHTML=calendarBody;
+ 
+}
+/* ]]> */
+</script>
+<style> 
+.monthPre{
+ color: gray;
+ text-align: center;
+}
+.monthNow{
+ color: blue;
+ text-align: center;
+}
+.dayNow{
+ border: 2px solid black;
+ color: #FF0000;
+ text-align: center;
+}
+.calendar td{
+ htmlContent: 2px;
+ width: 40px;
+}
+.monthNow th {
+ background-color: #000000;
+ color: #FFFFFF;
+ text-align: center;
+}
+.dayNames {
+ background: #0FF000;
+ color: #FFFFFF;
+ text-align: center;
+}
+</style> 
+</head>
+<body onload="displayCalendar()">
+ <div class="skipnav"></div>
+  <div class="container">
+	<div class="header">
+		<div class="header_left">
+			<form id="selectSchool">
+			  <p>
+				<select name="districtList">
+					<option>Pocahontas District Options</option>
+					<option>District Home</option>
+					<option>Middle Brook Elementary</option>
+					<option>Tower Tall High School</option>
+					<option>Summer Grove Junior High</option>
+					<option>Cherry Orchard Elementary</option>
+					<option>Center Park School</option>
+				</select>
+			  </p>
+			</form>
+		</div>
+		<div class="header_central">
+			<h1>Center Park School</h1><p><em>Home of the Hammerin Hippos</em></p>
+		</div>
+		<div class="header_right">
+			<form id="loginForm"> 
+				<p>User Name:<input type="text" name="UserName" size="10"/><br />
+				&nbsp;&nbsp;&nbsp;Password:<input type="password" name="password" size="10" /><br />
+				<input type="button" value="Sign In" /></p> 
+			</form>
+		</div>
+	</div> <!-- ends the header div --> 
+	<div class="title">
+		<div class="title_left">
+			<img class="thumb"  src="images/school_front.jpg" alt="school logo of a Hammerin Hippo" />
+			<img class="thumb"  src="images/hippo_logo.jpg"alt="picture of the school"  />
+		</div>	
+		<div class="title_right">
+	        <form>
+				<p>
+				   <input type="text" id="search_field" name="search" placeholder="Search this Site..." />
+				   <a id="mag_glass"><img src="images/mag_glass.jpg" alt="Search" height="20" width="20" /></a>
+				</p>
+		    </form>
+			<p>
+				1100 W Center Park Dr.<br />
+				Hutto, UT 84000<br /><strong>Phone:</strong> 801-555-4321<br />
+				<strong>Fax:</strong>801-555-9876
+			</p>
+		</div>
+	</div>
+	<div class="box">
+		<nav>
+			 <a href="index.html">Home</a>
+			 <a href="about.html">About Us</a>
+			 <a href="admin.html">Administration</a>
+			 <a href="counseling.html">Counseling</a>
+			 <a href="faculty.html">Faculty</a>
+			 <a href="policies.html">Policies</a>
+			 <a href="recognition.html">Recognition</a>
+			 <a href="registration.html">Registration</a>
+		</nav>
+		<div id="calendar"></div> 
+   </div> <!-- ends the box div -->
+</div> <!-- ends the container div -->
+<footer>
+  <ul>
+    <li><a href="">Questions or Feedback?</a></li>
+	<li>|</li>
+    <li><a href="termsofuse.pdf">Terms of Use</a></li>
+	<li>|</li>
+    <li><a href="privacypolicy.pdf">Privacy Policy</a></li>
+  </ul>
+  <p>Design by Andrew David; All content &copy; 2014 Center Park School Project</p>
+</footer>
+</body>
+</html>

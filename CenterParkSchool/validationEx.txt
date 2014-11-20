@@ -1,0 +1,53 @@
+function validateForm()
+{
+var x=document.forms["myForm"]["fname"].value;
+if (x==null || x=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+}
+
+function validateForm()
+{
+var x=document.forms["myForm"]["email"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+}
+
+The checkForm function tests the form input against our conditions, returning a value of true if the form is to be submitted (when all tests have been passed) or false to abort (cancel) the form submission. It's that simple.
+
+In a real-life situation you will most likely have more fields to check, and more complicated conditions, but the principle remains the same. All you need to do is extend the checkForm function to encompass the new fields and conditions:
+<script type="text/javascript"> function checkForm(form) { if(!condition1) { alert("Error: error message"); form.fieldname.focus(); return false; } if(!condition2) { alert("Error: error message"); form.fieldname.focus(); return false; } ... return true; } </script>
+
+When a return command is encountered, execution of the function is halted. In other words if the first condition fails, the second condition will not be tested and so forth. Only when all conditions have been satisfied do we reach the return true command, in which case the form will be submitted.
+
+You'll see that the all validation scripts presented on this and subsequent pages adhere to the same basic format.
+
+The value of a SELECT input element is accessed using:
+var selectBox = form.fieldname; var selectedValue = selectBox.options[selectBox.selectedIndex].value var selectedText = selectBox.options[selectBox.selectedIndex].text
+
+where fieldname is the SELECT element, which has an array of options and a value selectedIndex that tells you which option has been selected. The illustration below shows this relationship:
+
+Note that the 'I' in selectedIndex needs to be capitalised - JavaScript functions and variables are always case-sensitive.
+
+If you define a value for the OPTION elements in your SELECT list, then .value will return that, while .text will return the text that is visible in the browser. Here's an example of what this refers to:
+<option value="value">text</option>
+
+Note: One of the most common problems for novices is that Internet Explorer allows you to access the value of the selected option using the same format as for text boxes above. This is wrong!
+
+If you just want to check that an option has been chosen (ie. that the SELECT box is no longer in it's default state) then you can use:
+if(form.fieldname.selectedIndex > 0) { // an option has been selected } else { // no option selected }
+
+Radio buttons
+
+Radio buttons are implemented as if they were an array of checkboxes. To find out which value (if any) has been selected, you need to loop through the array until you find which one has been selected:
+function checkRadio(field) { for(var i=0; i < field.length; i++) { if(field[i].checked) return field[i].value; } return false; }
+
+The form handler function is then the following:
+function checkForm(form) { if(radioValue = checkRadio(form.radiofield)) { alert("You selected " + radioValue); return true; } else { alert("Error: No value was selected!"); return false; } }

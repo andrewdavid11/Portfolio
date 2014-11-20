@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* Layout Medium Screens */
+
+header {
+	height: 200px;
+	background: url(../images/banner_medium.jpg) no-repeat 90% 0px;
+}
+
+header a.logo {
+	width: 115px; height: 70px;
+	top: 20px; right: 20px;
+	background-image: url(../images/logo_medium.png);
+}
+
+.mobile_nav { display: none;}
+nav a { margin-right: 20px; }
+
+.hike_container { padding: 20px 20px 15px 20px; }
+.hike_container .hike { background-position: 0px 0px; }
+.hike_container .hike .content { padding: 70px 30px 0px 0px; }
+
+body { background-image: none; }
